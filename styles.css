@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{
+    --tomato: hsl(4, 100%, 67%);
+    --pink: hsl(346, 100%, 66%);
+    --dark-slate-gray: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--charcoal-grey);
+    line-height: 1.6;
+}
+
+.signup-text{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+}
+
+
+
+h1{
+    color: var(--dark-slate-gray);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: disc outside url(assets/images/icon-list.svg);
+    margin:1rem 2rem;
+    gap: 0.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+label{
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark-slate-gray);
+}
+
+input[type='email']{
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--grey);
+    color: var(--grey);
+    font-size: 16px;
+}
+
+button{
+    padding: 1rem;
+    margin-block: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--dark-slate-gray);
+
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus-visible{
+    position: relative;
+    background-image: linear-gradient(-90deg,
+        var(--pink),
+        var(--tomato));
+}
+
+button:hover::after,
+button:focus-visible::after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 30%;
+    filter: blur(1rem);
+    transform:translateY(1.5rem);
+    z-index: -1;
+}
