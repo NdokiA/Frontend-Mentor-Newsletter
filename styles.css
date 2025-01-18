@@ -50,11 +50,24 @@ form{
     gap: 0.2rem;
 }
 
+.form-label{
+    display: flex;
+    justify-content: space-between;
+}
+
 label{
     display: block;
     font-size: 13px;
     font-weight: 700;
     color: var(--dark-slate-gray);
+}
+
+.form-label .error-msg{
+    text-align: right;
+    color: red;
+    font-size: 13px;
+    font-weight: 700;
+    display: none;
 }
 
 input[type='email']{
@@ -63,6 +76,13 @@ input[type='email']{
     border: 1px solid var(--grey);
     color: var(--grey);
     font-size: 16px;
+}
+
+
+input[type='email']:not(:focus):invalid{
+    color: red;
+    border: 1px solid var(--pink);
+    background-color:  rgba(255, 0, 0, 0.3);
 }
 
 button{
