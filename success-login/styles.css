@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{
+    --tomato: hsl(4, 100%, 67%);
+    --pink: hsl(346, 100%, 66%);
+    --dark-slate-gray: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--charcoal-grey);
+    line-height: 1.6;
+    margin-top: 20vh;
+}
+
+.content{
+    margin-inline: 2rem;
+    margin-block: 2rem;
+    height: 100%;
+}
+
+.content-text{
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+h1{
+    color: var(--dark-slate-gray);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+span{
+    color: var(--dark-slate-gray);
+    font-weight: 700;
+}
+
+
+button{
+    width: 100%;
+    padding: 1rem;
+    margin-block: 5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--dark-slate-gray);
+
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-image 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+button:focus-visible{
+    position: relative;
+    background-image: linear-gradient(-90deg,
+        var(--pink),
+        var(--tomato));
+}
+
+button:hover::after,
+button:focus-visible::after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 30%;
+    filter: blur(1rem);
+    transform:translateY(1.5rem);
+    z-index: -1;
+}
