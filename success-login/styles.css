@@ -14,18 +14,22 @@
 }
 
 body{
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: var(--charcoal-grey);
     line-height: 1.6;
-    margin-top: 20vh;
+    display: grid;
+    place-items: center;
 }
+
 
 .content{
     margin-inline: 2rem;
     margin-block: 2rem;
-    height: 100%;
+    justify-self: center;
+    align-self: center;
 }
 
 .content-text{
@@ -34,9 +38,11 @@ body{
 }
 
 h1{
+    line-height: 1;
     color: var(--dark-slate-gray);
     font-weight: 700;
     font-size: 40px;
+    padding-bottom: 1rem;
 }
 
 span{
@@ -48,7 +54,7 @@ span{
 button{
     width: 100%;
     padding: 1rem;
-    margin-block: 5rem;
+    margin-top: 5rem;
     border-radius: 8px;
     border: none;
     background-color: var(--dark-slate-gray);
@@ -79,4 +85,21 @@ button:focus-visible::after{
     filter: blur(1rem);
     transform:translateY(1.5rem);
     z-index: -1;
+}
+
+@media (min-width: 768px){
+    body{
+        background-color: var(--dark-slate-gray);
+    }
+
+    .content{
+        background-color: var(--white);
+        padding: 2rem;
+        max-width: 436px;
+        border-radius: 30px;
+    }
+
+    button{
+        margin-top: 2rem;
+    }
 }

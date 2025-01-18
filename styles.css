@@ -28,7 +28,9 @@ body{
     gap: 0.5rem;
 }
 
-
+img{
+    width: 100%;
+}
 
 h1{
     color: var(--dark-slate-gray);
@@ -96,6 +98,7 @@ button{
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
+    transition: background-image 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover,
@@ -117,4 +120,28 @@ button:focus-visible::after{
     filter: blur(1rem);
     transform:translateY(1.5rem);
     z-index: -1;
+}
+
+@media (min-width: 768px){
+    main{
+        background-color: var(--dark-slate-gray);
+        display: grid;
+        place-items: center;
+    }
+    .content{
+        margin-block: 4rem;
+        background-color: var(--white);
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 870px;
+
+        padding: 1rem;
+        border-radius: 20px;
+    }
 }
